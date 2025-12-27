@@ -2,11 +2,14 @@
   "compilerOptions": {
     "target": "ESNext",
     "module": "CommonJS",
-    "declaration": true,
-    "outDir": "./dist",
+    "declaration": true, // This generates the .d.ts files (your types)
+    "declarationMap": true, // This lets you "Cmd+Click" and see the source code
+    "outDir": "./dist", // Where the compiled code goes
     "strict": true,
-    "baseUrl": ".",
-    "paths": { "@blaze/shared": ["./src/index"] }
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "skipLibCheck": true
   },
-  "include": ["src"]
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"]
 }
