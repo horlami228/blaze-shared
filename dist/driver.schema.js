@@ -6,4 +6,5 @@ exports.CreateDriverSchema = zod_1.z.object({
     fullName: zod_1.z.string().min(3, "Name is too short"),
     email: zod_1.z.email("Invalid email"),
     vehicleYear: zod_1.z.coerce.number().min(2000, "Vehicle too old"),
+    driverWife: zod_1.z.boolean().default(false),
 });
