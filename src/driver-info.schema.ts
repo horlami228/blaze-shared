@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-export const driverInfoSchema = z.object({
+export const DriverInfoSchema = z.object({
   licenseNumber: z
     .string()
     .max(12, "License number is too long")
@@ -9,4 +9,4 @@ export const driverInfoSchema = z.object({
   profilePhoto: z.any(),
 });
 
-export type DriverInfoInput = z.infer<typeof driverInfoSchema>;
+export type DriverInfoInput = z.infer<typeof DriverInfoSchema>;
