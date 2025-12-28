@@ -17,7 +17,10 @@ export const DriverPersonalInfoSchema = z.strictObject({
     .min(1, "Last name is required")
     .describe("Last name of the driver"),
 
-  dateOfBirth: z.coerce.date().describe("Date of birth of the driver"),
+  dateOfBirth: z
+    .string()
+    .pipe(z.coerce.date())
+    .describe("Date of birth of the driver"),
 
   gender: z.enum(Gender).describe("Gender of the driver"),
 });

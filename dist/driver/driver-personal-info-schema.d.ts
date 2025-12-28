@@ -3,7 +3,7 @@ export declare const DriverPersonalInfoSchema: z.ZodObject<{
     phone: z.ZodString;
     firstName: z.ZodString;
     lastName: z.ZodString;
-    dateOfBirth: z.ZodCoercedDate<unknown>;
+    dateOfBirth: z.ZodPipe<z.ZodString, z.ZodCoercedDate<string>>;
     gender: z.ZodEnum<{
         readonly MALE: "MALE";
         readonly FEMALE: "FEMALE";

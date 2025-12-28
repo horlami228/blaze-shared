@@ -16,6 +16,9 @@ exports.DriverPersonalInfoSchema = zod_1.z.strictObject({
         .string()
         .min(1, "Last name is required")
         .describe("Last name of the driver"),
-    dateOfBirth: zod_1.z.coerce.date().describe("Date of birth of the driver"),
+    dateOfBirth: zod_1.z
+        .string()
+        .pipe(zod_1.z.coerce.date())
+        .describe("Date of birth of the driver"),
     gender: zod_1.z.enum(enum_1.Gender).describe("Gender of the driver"),
 });
