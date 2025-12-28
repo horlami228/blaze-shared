@@ -3,7 +3,6 @@ export declare const CreateDriverSchema: z.ZodObject<{
     fullName: z.ZodString;
     email: z.ZodEmail;
     vehicleYear: z.ZodCoercedNumber<unknown>;
-    driverWife: z.ZodDefault<z.ZodBoolean>;
-}, z.core.$strip>;
+}, z.core.$strict>;
 export type CreateDriverInput = z.infer<typeof CreateDriverSchema>;
 //# sourceMappingURL=driver.schema.d.ts.map
