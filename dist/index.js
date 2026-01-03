@@ -20,3 +20,6 @@ __exportStar(require("./auth/google-login.schema"), exports);
 __exportStar(require("./auth/login.schema"), exports);
 __exportStar(require("./driver/driver-personal-info-schema"), exports);
 __exportStar(require("./driver/vehicle-info-schema"), exports);
+__exportStar(require("./driver/update-driver-location.schema"), exports);
+__exportStar(require("./ride/request-ride-schema"), exports);
+__exportStar(require("./driver/nearby-driver-schema"), exports);
